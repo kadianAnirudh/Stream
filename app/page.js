@@ -1,5 +1,6 @@
 import Image from "next/image";
 import stream from "./Images/stream.png";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -13,9 +14,11 @@ export default function Home() {
             This project has everything from Authentication, Chat & Feed API and
             professional documentation. Need more? I'm ready!
           </p>
-          <a
-            href="#"
-            class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+
+          {/* Sign up Link */}
+          <Link
+            href="/sign-up"
+            className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
           >
             Get started
             <svg
@@ -30,13 +33,14 @@ export default function Home() {
                 clip-rule="evenodd"
               ></path>
             </svg>
-          </a>
-          <a
+          </Link>
+
+          <Link
             href="https://github.com/kadianAnirudh/Stream"
-            class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+            className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
           >
             Github
-          </a>
+          </Link>
         </div>
         <div class="flex justify-center items-center lg:mt-0 lg:col-span-5">
           <Image src={stream} alt="mockup" className="h-full" />
