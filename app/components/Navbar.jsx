@@ -16,6 +16,7 @@ const Navbar = async () => {
               src={streamLogo}
               className="mr-3 h-full"
               alt="Flowbite Logo"
+              priority
             />
           </a>
           {/* Signup and SignIn button */}
