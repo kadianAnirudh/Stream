@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+
+// You can import ready made components from Stream
 import { StreamChat } from "stream-chat";
 import {
   Chat,
@@ -14,9 +16,11 @@ import {
   ChannelList,
 } from "stream-chat-react";
 
-import Logo from "../Images/streamLogo.png";
+import "dotenv/config";
 
 import "stream-chat-react/dist/css/v2/index.css";
+
+require("dotenv").config();
 
 const apiKey = "33am8dam9y3v";
 
@@ -24,7 +28,7 @@ const user = {
   id: "john",
   name: "John Snow",
   image:
-    "https://getstream.io/random_png/?id=delicate-art-0&name=delicate-art-0",
+    "https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png",
 };
 
 const page = () => {
@@ -39,7 +43,7 @@ const page = () => {
 
       const channel = chatClient.channel("messaging", "react-talk", {
         image:
-          "https://getstream.io/random_png/?id=delicate-art-0&name=delicate-art-0",
+          "https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png",
         name: "Talk about React",
         members: [user.id],
       });
