@@ -10,16 +10,13 @@ const Demo = () => {
   const [completedSentence, setCompletedSentence] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const API_KEY = "";
+  const API_KEY = "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";
 
   const fetchData = async (input) => {
     const response = await axios.post(
       "https://api.openai.com/v1/completions",
       {
-        prompt: `You are a special customer support AI designed for Get Stream, 
-        Stream powers Chat Messaging and Activity Feeds for billions of global end-users across thousands of different apps.
-        The customers can ask you different qustions regarding the company and the products. You can help them and provide 
-        the documentation link - https://getstream.io/chat/docs for further assistance. The customer's query for now is :
+        prompt: `You are a customer support specialist at Stream, getstream.io, help the customer with their query: 
         "${input}"`,
         model: "text-davinci-002",
         max_tokens: 300,

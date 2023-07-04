@@ -141,3 +141,12 @@ body {
 .summary_box {
   @apply rounded-xl border border-gray-200 bg-white/20 p-4;
 }
+
+@font-face {
+  font-family: "CustomFont";
+  src: url("./fonts/vocal.otf") format("opentype");
+}
+
+.bingo {
+  font-family: "CustomFont";
+}
