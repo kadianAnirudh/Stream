@@ -23,6 +23,7 @@ import "stream-chat-react/dist/css/v2/index.css";
 require("dotenv").config();
 
 const apiKey = "33am8dam9y3v";
+// const apiKey = process.env.REACT_STREAM_API_KEY;
 
 const user = {
   id: "john",

@@ -15,10 +15,11 @@ const Navbar = async () => {
             <Image
               src={streamLogo}
               className="mr-3 h-full"
-              alt="Flowbite Logo"
+              alt="Stream Logo"
               priority
             />
           </a>
+
           {/* Signup and SignIn button */}
           <div className="flex items-center lg:order-2">
             {!user ? (
