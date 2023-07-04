@@ -10,16 +10,20 @@ const Demo = () => {
   const [completedSentence, setCompletedSentence] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const API_KEY = "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";
+  const API_KEY = "";
 
   const fetchData = async (input) => {
     const response = await axios.post(
       "https://api.openai.com/v1/completions",
       {
-        prompt: `Complete this sentence: "${input}"`,
+        prompt: `You are a special customer support AI designed for Get Stream, 
+        Stream powers Chat Messaging and Activity Feeds for billions of global end-users across thousands of different apps.
+        The customers can ask you different qustions regarding the company and the products. You can help them and provide 
+        the documentation link - https://getstream.io/chat/docs for further assistance. The customer's query for now is :
+        "${input}"`,
         model: "text-davinci-002",
-        max_tokens: 50,
-        n: 1,
+        max_tokens: 300,
+        n: 10,
         stop: ".",
       },
       {
@@ -57,18 +61,18 @@ const Demo = () => {
           onSubmit={handleSubmit}
         >
           <Image
-            src={linkIcon}
+            src={tick}
             alt="link-icon"
             className="absolute left-0 my-2 w-5 ml-3 "
           />
 
           <input
             type="text"
-            placeholder="Enter your text"
+            placeholder="Enter your query"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             // required
-            className="url_input peer"
+            className="url_input peer w-4/5"
           />
 
           <button
@@ -80,8 +84,8 @@ const Demo = () => {
         </form>
 
         {completedSentence && (
-          <div className="result-container">
-            <h3>Summary:</h3>
+          <div className="result-container mt-10 ">
+            <h3 className="">Solution:</h3>
             <p>{completedSentence}</p>
           </div>
         )}

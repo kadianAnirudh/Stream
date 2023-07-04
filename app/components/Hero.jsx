@@ -3,13 +3,13 @@ import { logo } from "../assets";
 
 const Hero = () => {
   return (
-    <header className="w-full flex justify-center items-center flex-col">
+    <header className="w-full flex justify-center items-center flex-col mt-10">
       <h1 className="head_text">
-        Summarize articles with
+        Find quick solutions with
         <br className="max-md:hidden" />
         <span className="orange_gradient"> Stream AI </span>
       </h1>
-      <h2 className="desc">Summarize long articles</h2>
+      <h2 className="desc"> Quick | Short | Precise</h2>
     </header>
   );
 };
