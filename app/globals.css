@@ -1,39 +1,8 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
-
+/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100;400;600&family=Space+Mono&display=swap'); */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* 
-  Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
-*/
 
 .main {
   width: 100vw;
@@ -149,4 +118,145 @@ body {
 
 .bingo {
   font-family: "CustomFont";
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2%;
+  background-color: #ffff;
+}
+
+.search-main {
+  height: 30vh;
+  width: 90%;
+  margin-top: 3%;
+  display: flex;
+  /* justify-content:center; */
+  flex-direction: column;
+  align-items: center;
+  /* background-color: white; */
+}
+
+.search-input {
+  width: 60%;
+  height: 25px;
+  border: 2px solid grey;
+  border-radius: 5px;
+  margin: 10px 10px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+  font-size: 18px;
+}
+
+@media (max-width: 400px) {
+  .search-input {
+    width: 90%;
+  }
+
+  .searchBox1 {
+    z-index: 1;
+    width: 300px;
+  }
+
+  .searchElement {
+    width: 300px;
+  }
+
+  /* .searchElement{
+    width: 400px;
+  } */
+}
+
+.button-container {
+  margin-top: 2%;
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-a,
+.btn-b,
+.btn-c {
+  margin-left: 5%;
+  margin-right: 5%;
+  cursor: pointer;
+  border-radius: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-a {
+  height: 40px;
+  width: 20%;
+  background-color: #2164f4;
+  border: 1px solid white;
+  max-width: 100px;
+
+}
+
+.btn-b {
+  height: 40px;
+  width: 60%;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  background-color: #2164f4;
+  border: 1px solid white;
+  max-width: 200px;
+  font-size: 15px;
+
+}
+
+.btn-c {
+  height: 40px;
+  width: 20%;
+  border: 1px solid white;
+  max-width: 100px;
+  background-color: #2164f4;
+}
+
+.map-main {
+  height: 60vh;
+  width: 90%;
+  margin-top: 3%;
+}
+
+input,
+button,
+.distance-calculator {
+  z-index: 0;
+}
+
+.searchBox1 {
+  z-index: 1;
+  width: auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  height: 400px;
+  overflow: hidden;
+  overflow-y: auto;
+  position: absolute;
+  background-color: white;
+  margin: 10px 10px;
+  height: auto;
+  /* margin-top:5% */
+}
+
+.searchBox1::-webkit-scrollbar {
+  display: none;
+}
+
+.searchElement {
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.searchElementp:hover {
+  background-color: #F5F5F5;
 }

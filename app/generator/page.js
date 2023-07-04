@@ -5,8 +5,6 @@ import { Input } from "@nextui-org/react";
 import { Textarea } from "@nextui-org/react";
 import { Button } from "@nextui-org/react";
 import SamPicture from "../images/sam.png";
-import Shakespeare from "../images/shakespeareWiki.png";
-import Tesla from "../images/teslaImage.png";
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
 import Follow from "../images/Follow.png";
@@ -513,7 +511,7 @@ const page = () => {
             {" "}
             Preview your beautiful carousel{" "}
           </h2>
-          <div className="flex items-center justify-center mt-8 overflow-x-auto">
+          <div className="flex items-center justify-center mt-8 overflow-x-auto border border-black">
             <div
               id="myDiv"
               ref={divRef}
